@@ -38,20 +38,16 @@ int main()
         std::cin >> s_input;
         
         std::vector<int> orange;
-        
+
+        int h_index = 0;
+        std::string anwer_string;
+        int index = 1;        
         for (int i = 0; i < std::stoi(s_input); i++)
         {
             std::string lala_input;
             std::cin >> lala_input;
             
             orange.push_back(std::stoi(lala_input));
-        }
-        
-        int h_index = 0;
-        std::string anwer_string;
-        int index = 1;
-        for (int i = 0; i < orange.size(); i++)
-        {
             int count = 0;
             for (int j = 0; j <= i; j++)
             {
@@ -71,6 +67,7 @@ int main()
             anwer_string += " " + std::to_string(h_index);
             
         }
+        
         
       answer(case_num, anwer_string);
 
